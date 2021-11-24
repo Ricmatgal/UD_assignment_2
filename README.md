@@ -37,6 +37,7 @@ A web app based on a ML pipeline trained and validated to classify public messag
 |- model_metrics.csv # metrics of the trained model, used also for visualization (generated from train_classifier.py)
 
 - README.md
+```
 
 # Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.

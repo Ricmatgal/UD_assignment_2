@@ -1,23 +1,23 @@
 # Disaster Response Pipeline Project
 
-# Summary 
+# Summary:
 A web app based on a ML pipeline trained and validated to classify public messages asking for aid during disasters and emergencies concerning whether and which relevant agencies to call upon. 
 
-### Data
+### Data:
 * The data (disaster_categories.csv and disaster_messages.csv) contains text messages gathered by FigureEight Inc. after major disasters and labelled into 36 different categories of victim needs. 
 
-### ETL Pipeline
+### ETL Pipeline:
 * The ETL Pipeline (process_data.py) etracts and clean data from the .csv files. The clean data is then loaded into an SQlite DB (data/DisasterResponse.db).
 
-### ML Pipeline
+### ML Pipeline:
 * The ML pipeline (train_classifier.py), uses a  **Random Forest Classifier** as estimator, fitted on the presented data. It then returns a model (models/classifier.pkl) used from the web app and metrics of the model validation (models/model_metrics.csv).
 
-### Web App 
+### Web App:
 * The web app allows a user to input a message. The trained model returns the disaster categories for which the inputed message is relevant.
 
-# File Description 
+# File Description:
 
-### Structure
+### Structure:
 ```
 - app
 | - template
@@ -69,7 +69,7 @@ Loading data...
     DATABASE: data/DisasterResponse.db
 Building model...
 Training model...
-Elapsed time: 11.0 min. ---
+Elapsed time: 11.0 min.
 Evaluating model...
                         precision    recall  f1-score   support
 
@@ -120,8 +120,25 @@ Saving model...
 Trained model saved!
 ```
 
+3. Webapp:
+
+```
+* Serving Flask app 'run' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.143:3001/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 923-609-621
+```
+
+
 
 # Credits 
 * Data provided by <a href = https://appen.com/> FigureEight, now appen </a>
-* Materials provided by <a href = udacity.com> UDACITY </a> 
+* Materials provided by <a href = udacity.com> Udacity inc. </a> 
 

@@ -90,11 +90,11 @@ def build_model():
 
     # here you can try out different parameters for the grid search, in this case return grid insted of pipeline:
 
-    #parameters = {'multi_clf__estimator__n_estimators':[100,200,300]}
-    #grid = GridSearchCV(pipeline,param_grid=parameters)
+    parameters = {'multi_clf__estimator__n_estimators':[100,200]}
+    grid = GridSearchCV(pipeline,param_grid=parameters)
 
-    #return grid
-    return pipeline
+    return grid
+    #return pipeline
 
 # evaluate the model using classification_report
 def evaluate_model(model, X_test, Y_test, category_names):
@@ -149,7 +149,7 @@ def main():
         model.fit(X_train, Y_train)
 
          # training time taken in min.
-        print("...Training Time: %s seconds ---" % (time.time() - start_time)//60)
+        print("Elapsed time: %s min." % ((time.time() - start_time)//60))
         
         # evaluate the model
         print('Evaluating model...')
